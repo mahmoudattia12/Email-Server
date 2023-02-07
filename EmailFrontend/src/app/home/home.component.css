@@ -1,0 +1,306 @@
+.container {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: rgba(128, 128, 128, 0.1);
+    /* background: rgb(211, 211, 212) !important; */
+}
+
+:root {
+    --main-hover-color-button: rgba(128, 128, 128, 0.2);
+    --main-searching-field-color: #eaf1fb;
+}
+
+/* styling of the side nav */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+
+}
+
+.compose {
+    /* margin-top: 50px; */
+    margin-left: 40px;
+    margin-bottom: 30px;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: 0.25s ease-in-out;
+}
+
+#welcome-header{
+  margin-left: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-top: 30px; */
+}
+button:hover {
+    cursor: pointer;
+}
+
+.compose:hover {
+    box-shadow: 2px 2px 2px black;
+}
+
+.sidebar ul {
+    list-style: none;
+    height: 200px;
+    width: auto;
+
+}
+
+#gmail_pic{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nice-icon{
+  width: 40px;
+}
+
+.sidebar ul li {
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.sidebar ul button {
+    padding: 10px;
+    margin-left: 0;
+    /* padding-right: 110px; */
+    border-radius: 40px 999em 999em 40px;
+    transition: 0.2s ease-in-out;
+}
+
+.sidebar ul button:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+
+}
+
+.sidebar button {
+    border: none;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.sidebar a {
+    display: block;
+    margin-top: 150px;
+    outline: none;
+    padding: 10px;
+    margin-left: 40px;
+    width: 50%;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+/* end the styling of the side nav */
+
+
+/* styling of the main associated to inbox */
+
+.associated-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-field {
+    width: 70vw;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: #eaf1fb;
+}
+
+.search-field button {
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #eaf1fb;
+}
+
+.search-field input {
+    border: none;
+    padding: 10px;
+    font-size: 1.25em;
+    width: 50vw;
+    background-color: #eaf1fb;
+    ;
+}
+
+.search-field i {
+    margin: 0;
+}
+
+.search-field button:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    border-radius: 50%;
+}
+
+.emails-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.emails-options button {
+    border: none;
+    background: rgba(128, 128, 128, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.emails-options button:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    /* padding: 3px; */
+}
+
+.emails-options select {
+    padding: 10px;
+    border-radius: 8px;
+    background: rgba(128, 128, 128, 0.1);
+    border: none;
+    margin-left: 10px;
+}
+
+.emails-options select:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+}
+
+.emails-options input {
+    font-size: 1.1em;
+    border-radius: 3px;
+}
+
+#filter-button,
+#sort-button {
+    background-color: lightblue;
+    margin-left: 5px;
+}
+
+
+#filter-button:hover,
+#sort-button:hover {
+    background-color: rgb(149, 211, 231);
+}
+
+.mails-recieved {
+    margin-top: 15px;
+    background-color: white;
+    border: 2px solid white;
+    padding: 30px;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 25px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+.light-blocker {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.pop-up-window {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  font-size: 1.2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  z-index: 10000;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.pop-up-window input{
+  border: none;
+  font-size: 1.1em;
+}
+
+.pop-up-window button {
+  cursor: pointer;
+  background-color: lightgreen;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+}
+.pop-up-window button:hover{
+  background-color: rgb(192, 250, 192);
+}
+
+.pop-up-window div:not(.send-mail-window div:first-child) {
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+#move-to-options{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+.new-message-label {
+  padding: 7px;
+  background-color: rgb(120, 187, 209);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.new-message-label button {
+  border: none;
+  background-color: rgb(120, 187, 209);
+}
+
+
+.new-message-label button:hover {
+  background-color: rgb(57, 142, 170);
+  border-radius: 50%;
+}
+
+.new-message-label i {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+
+
+/* end styling of the main associated to inbox */

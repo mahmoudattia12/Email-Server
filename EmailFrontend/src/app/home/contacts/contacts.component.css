@@ -1,0 +1,175 @@
+.light-blocker {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.pop-up-window {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  font-size: 1.2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 55vw;
+  max-height: 70vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 10000;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.pop-up-window input{
+  /* border: none; */
+  font-size: 1.1em;
+}
+
+.create-folder {
+  cursor: pointer;
+  background-color: lightgreen;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  width: 50%;
+  border-radius: 5px;
+  margin-left: 25%;
+  margin-bottom: 10px;
+}
+
+.create-folder:hover{
+  background-color: rgb(192, 250, 192);
+}
+
+.pop-up-window div:not(.send-mail-window div:first-child) {
+  /* margin-bottom: 20px; */
+  margin-left: 10px;
+}
+
+.new-message-label {
+  padding: 7px;
+  background-color: rgb(120, 187, 209);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.new-message-label button {
+  border: none;
+  background-color: rgb(120, 187, 209);
+}
+
+
+.new-message-label button:hover {
+  background-color: rgb(57, 142, 170);
+  border-radius: 50%;
+}
+
+.new-message-label i {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#first-email,#first-edited-email{
+display: flex;
+flex-direction: row;
+height: 50px;
+}
+
+#first-email button , #first-edited-email button{
+  cursor: pointer;
+  background-color: lightgreen;
+  font-weight: bold;
+  border: none;
+  padding: 7px;
+  height: 30px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+#first-email button:hover,#first-edited-email button:hover{
+  background-color: rgb(192, 250, 192);
+}
+#first-email input, #first-edited-email input{
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+#more-contacts-emails input{
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+
+/* css for pop contact info */
+
+.email-contents {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  font-size: 1.2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  height: 60vh;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: scroll;
+  background-color: white;
+  display: none;
+}
+
+.email-contents div:not(.email-contents:first-child) {
+  margin-left: 30px;
+}
+
+
+.new-message-label {
+  padding: 7px;
+  background-color: rgb(120, 187, 209);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-message-label button {
+  border: none;
+  background-color: rgb(120, 187, 209);
+  cursor: pointer;
+}
+
+
+.new-message-label button:hover {
+  background-color: rgb(57, 142, 170);
+  border-radius: 50%;
+}
+
+
+.new-message-label i {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#from-field{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}

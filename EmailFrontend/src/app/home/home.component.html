@@ -1,0 +1,146 @@
+<div class="container">
+  <div class="sidebar">
+    <div id="gmail_pic">
+      <!-- <i class="favicon.ico"></i> -->
+      <img src="/assets/favicon.ico" alt="" id="nice-icon" />
+    </div>
+    <div id="welcome-header">
+      <i class="fa-solid fa-user"></i>
+      <h3 id="userName"></h3>
+    </div>
+    <button id="compose" class="compose" (click)="gotoCompose()">
+      <i class="fa-solid fa-pencil"></i>Compose
+    </button>
+    <ul>
+      <li>
+        <button (click)="gotoinbox()" id="inbox-button">
+          <i class="fa fa-light fa-inbox"></i>Inbox
+        </button>
+      </li>
+      <li>
+        <button (click)="gototrash()" id="trash-button">
+          <i class="fa-solid fa-trash-can"></i>Trash
+        </button>
+      </li>
+      <li>
+        <button (click)="gotosent()" id="sent-button">
+          <i class="fa fa-light fa-paper-plane"></i>Sent
+        </button>
+      </li>
+      <li>
+        <button (click)="gotodraft()" id="draft-button">
+          <i class="fa-regular fa-file"></i>Draft
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="gotocontacts()"
+          style="font-weight: bold"
+          id="contacts-button"
+        >
+          Contacts
+        </button>
+      </li>
+      <li>
+        <button (click)="addNewContactClicked()">
+          <i class="fa-solid fa-plus"></i>Add Contact
+        </button>
+      </li>
+      <li>
+        <button
+          (click)="gotofolders()"
+          style="font-weight: bold"
+          id="folders-button"
+        >
+          Folders
+        </button>
+      </li>
+      <li>
+        <button (click)="addNewFolderClicked()">
+          <i class="fa-solid fa-plus"></i>Add Folder
+        </button>
+      </li>
+    </ul>
+    <a
+      routerLink="/login"
+      class="compose"
+      style="background-color: rgba(255, 0, 0, 0.8)"
+      ><i class="fa-solid fa-arrow-right-from-bracket"></i>Log out</a
+    >
+  </div>
+
+  <div class="associated-main">
+    <div class="search-field" id="search-field">
+      <button (click)="search()">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <input type="text" id="search-input" placeholder="Search mail" />
+    </div>
+
+    <div class="light-blocker" id="light-blocker"></div>
+    <div class="pop-up-window" id="move-to-folder-window">
+      <div class="new-message-label" style="margin-left: 0">
+        <span>Move to folder</span>
+        <a
+          ><button (click)="close_move_to_folder()">
+            <i class="fa-solid fa-circle-xmark"></i></button
+        ></a>
+      </div>
+      <div class="folder-name">
+        <span>Enter the name of the folder:</span>
+        <input type="text" id="folder-entered-name" />
+      </div>
+      <button id="create-folder" (click)="readFolderName()">Move</button>
+    </div>
+
+    <div class="mails-recieved">
+      <div class="emails-options" id="emails-options">
+        <button (click)="refresh()" id="refresh-button">
+          <i class="fa-solid fa-arrows-rotate"></i>Refresh
+        </button>
+
+        <button (click)="pop_move_to_folder()" id="move-to-folder-button">
+          <i class="fa fa-light fa-up-down-left-right"></i>Move to folder
+        </button>
+
+        <button (click)="delete()" id="delete-button">
+          <i class="fa-solid fa-trash-can"></i>Delete
+        </button>
+
+        <button id="restore-button" (click)="restore_emails_from_trash()">
+          <i class="fa fa-light fa-trash-arrow-up"></i>Restore
+        </button>
+
+        <div>
+          <label for="sort_select">Sort:</label>
+          <select id="sort_select">
+            <option selected><button>Date</button></option>
+            <option><button>Priority</button></option>
+            <option><button>Sender</button></option>
+            <option><button>Receiver</button></option>
+            <option><button>Subject</button></option>
+            <option><button>Body</button></option>
+            <option><button>Attachment Size</button></option>
+          </select>
+          <select id="order_select">
+            <option selected><button>Ascendingly</button></option>
+            <option><button>Decendingly</button></option>
+          </select>
+          <button id="sort-button" (click)="sort()">Sort</button>
+        </div>
+
+        <div id="filter-div">
+          <label for="Filter-select">Filter by:</label>
+          <select id="Filter-select">
+            <option><button>Sender</button></option>
+            <option selected><button>Subject</button></option>
+          </select>
+          <input type="text" id="filter-input" style="margin-left: 5px" />
+          <button id="filter-button" (click)="filter()">Filter</button>
+        </div>
+      </div>
+      <hr style="margin-top: 20px; margin-bottom: 20px" id="horizontal-line" />
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

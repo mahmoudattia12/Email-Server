@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="login-form">
+        <h1>Log in</h1>
+        <form action="" method="get">
+            <div>
+                <p><label for="Username">Username*</label></p>
+                <input type="Username" id="username" name="username" required autocomplete="off">
+            </div>
+            <div id="username-error">Your username should contain at least 4 characters/symbols</div>
+            <div>
+                <p><label for="password">Password*</label></p>
+                <input type="password" id="password" required>
+            </div>
+            <div id="password-error">Your password should contain at least 8 characters/symbols</div>
+            <button type="button" id="btn" (click)="login()" (window:keydown.enter) = "login()">Log in</button>
+            <div class="donthave">Doesn't Have An Account? <a routerLink="/">Sign Up</a></div>
+        </form>
+        <div></div>
+    </div>
+    <!-- Right section of the form containing image -->
+</div>

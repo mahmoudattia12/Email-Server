@@ -1,0 +1,172 @@
+.light-blocker {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.3;
+    top: 0;
+    right: 0;
+}
+
+.send-mail-window {
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    font-size: 1.2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 95vh;
+    z-index: 100;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#priority_select {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#attachment {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.send-mail-window button {
+    cursor: pointer;
+}
+
+.send-mail-window textarea {
+    font-size: 1.2em;
+    resize: none;
+    /* font-weight: bold; */
+}
+
+#recievers-box{
+  display: flex;
+  flex-direction: row;
+}
+
+#add-reciever-button{
+margin-left: 30px;
+border-radius: 10px;
+font-size: 1.1em;
+}
+
+.send-mail-window div{
+  margin-left: 10px;
+}
+
+.new-message-label,#recievers-box,.more-reciever,.subject,#Priority,#Attachments{
+  margin-bottom: 30px;
+}
+
+.send-mail-window textarea,
+.send-mail-window input {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.send-mail-window input {
+    border: none;
+}
+
+.to,
+.subject {
+    border: 1px solid black;
+    width: 80%;
+    padding: 10px;
+    /* font-size: 1.25em; */
+}
+
+.to input:focus,
+.subject input:focus {
+    outline: none;
+}
+
+.to input,
+.subject input {
+    font-size: 1.2em;
+    /* width: 100%; */
+    width: 80%;
+}
+
+.Message {
+    display: flex;
+    align-items: center;
+
+}
+
+.new-message-label {
+    padding: 7px;
+    background-color: rgb(120, 187, 209);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.new-message-label button,#add-reciever-button {
+    border: none;
+    background-color: rgb(120, 187, 209);
+}
+
+#add-reciever-button:hover{
+  background-color: rgb(57, 142, 170);
+}
+.new-message-label button:hover {
+    background-color: rgb(57, 142, 170);
+    border-radius: 50%;
+}
+
+.new-message-label i {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+.message-options {
+    /* position: absolute; */
+    margin: 0;
+    bottom: 0;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.message-options button {
+    border: none;
+    padding: 15px;
+    background-color: rgb(120, 187, 209);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+.message-options button:hover {
+    background-color: rgb(57, 142, 170);
+}
+
+.more-reciever{
+  border: 1px solid black;
+  width: 80%;
+  padding: 10px;
+}
+
+.more-reciever input{
+  font-size: 1.2em;
+  /* width: 100%; */
+  width: 80%;
+}
+
+.more-reciever input:focus{
+  outline: none;
+}

@@ -1,0 +1,74 @@
+<div class="light-blocker" id="light-blocker"></div>
+
+<!-- create new contact window -->
+<div class="pop-up-window" id="create-contact-window">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>Create a new contact</span>
+    <a
+      ><button (click)="x_clicked()" style="cursor: pointer">
+        <i class="fa-solid fa-circle-xmark"></i></button
+    ></a>
+  </div>
+  <div class="folder-name">
+    <span>Enter the name of the contact:</span>
+    <input type="text" id="new-contact-name" />
+  </div>
+  <div>
+    <h5>Add the contact email(s):</h5>
+  </div>
+  <div id="first-email">
+    <input type="text" id="1-email" placeholder="Enter Email Address" />
+    <button (click)="addMoreEmails()">+ Add</button>
+  </div>
+  <div id="more-contacts-emails"></div>
+
+  <button class="create-folder" (click)="createContact()">Create</button>
+</div>
+
+<!-- dispayed contacts area -->
+<div class="emails-displayed" id="emails-displayed"></div>
+
+<!-- pop widow for contact and his emails  -->
+
+<div class="email-contents" id="contact-contents">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>Contact Info</span>
+    <button (click)="closePopUp()">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+  </div>
+  <div class="from">
+    <span>Contact Name:</span>
+    <div id="from-field">AdelMahmoudMohamed</div>
+  </div>
+  <div>
+    <span>Email(s):</span>
+  </div>
+  <div id="contact-emails-field"></div>
+</div>
+
+<!-- popup for edit -->
+<!-- create new contact window -->
+<div class="pop-up-window" id="edit-contact-window">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>Edit Contact</span>
+    <a
+      ><button (click)="x_edit_clicked()" style="cursor: pointer">
+        <i class="fa-solid fa-circle-xmark"></i></button
+    ></a>
+  </div>
+  <div class="folder-name">
+    <span>Enter the new name of the contact:</span>
+    <input type="text" id="edited-new-name" />
+  </div>
+  <div>
+    <h5>Edit the contact email(s):</h5>
+  </div>
+  <div id="first-edited-email">
+    <input type="text" id="0-edited-email" placeholder="Enter Email Address" />
+    <button (click)="addMoreEditedEmails()">+ Add</button>
+  </div>
+  <div id="more-edited-contacts-emails"></div>
+
+  <button class="create-folder" (click)="editContact()">Edit</button>
+</div>

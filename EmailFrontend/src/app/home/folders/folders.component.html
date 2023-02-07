@@ -1,0 +1,47 @@
+
+
+<div class="light-blocker" id = "light-blocker"></div>
+<div class="pop-up-window" id = "create-folder-window">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>Create a new folder</span>
+    <a ><button (click)="closeCreateFolderPopUP()"><i class="fa-solid fa-circle-xmark"></i></button></a>
+  </div>
+  <div class="folder-name">
+    <span>Enter the name of the folder:</span>
+    <input type="text" id="new-folder-name"/>
+  </div>
+  <button id = "create-folder" (click)="createFolder()">Create</button>
+</div>
+
+<div class="pop-up-window" id = "rename-folder-window">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>Rename the folder</span>
+    <a ><button (click)="closeRenameWindow()"><i class="fa-solid fa-circle-xmark"></i></button></a>
+  </div>
+  <div class="folder-name">
+    <span>Enter the new name of the folder:</span>
+    <input type="text" id="folder-new-name"/>
+  </div>
+  <button  (click)="renameFolder()">Rename</button>
+</div>
+
+
+<div id = "display-folders-and-options">
+  <label for="folder_select">Select the desired folder: </label>
+  <select id="folder_select">
+  </select>
+  <button id = "select-folder-button" (click)="selectClicked()">Select</button>
+
+  <div id="view-folder-options">
+    <label for="folder_options">Select the desired folder operation: </label>
+    <select id="folder_options">
+      <option value="deleteFolder">Delete Folder</option>
+      <option value="renameFolder">Rename Folder</option>
+      <option value="viewEmails">View Emails</option>
+    </select>
+    <button (click)="selectOperationClicked()">submit operation</button>
+  </div>
+</div>
+
+<div class="emails-displayed" id="emails-displayed">
+</div>

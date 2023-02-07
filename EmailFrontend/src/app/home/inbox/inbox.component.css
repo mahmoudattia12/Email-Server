@@ -1,0 +1,85 @@
+.mails-recieved {
+    margin-top: 15px;
+    background-color: white;
+    border: 2px solid white;
+    padding: 30px;
+    width: 80vw;
+    height: 80vh;
+    border-radius: 25px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+
+
+
+.light-blocker {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    opacity: 0.4;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+.email-contents {
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    font-size: 1.2em;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75vw;
+    height: 95vh;
+    z-index: 100;
+    border-radius: 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: white;
+    display: none;
+}
+
+.email-contents div:not(.email-contents:first-child) {
+    margin-left: 30px;
+}
+
+
+.new-message-label {
+    padding: 7px;
+    background-color: rgb(120, 187, 209);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.new-message-label button {
+    border: none;
+    background-color: rgb(120, 187, 209);
+    cursor: pointer;
+}
+
+
+.new-message-label button:hover {
+    background-color: rgb(57, 142, 170);
+    border-radius: 50%;
+}
+
+
+.new-message-label i {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+#from-field,#subject-field,#priority-field,#body-field, #time-field{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+

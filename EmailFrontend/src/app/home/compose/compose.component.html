@@ -1,0 +1,63 @@
+<div class="light-blocker"></div>
+<div class="send-mail-window">
+  <div class="new-message-label" style="margin-left: 0">
+    <span>New message</span>
+    <button (click)="moveDraft()"><i class="fa-solid fa-circle-xmark"></i></button>
+  </div>
+
+  <div id = "recievers-box" style="margin-left: 0px;">
+    <div class="to" id = "to">
+      <div>
+        <span>To:</span>
+        <input type="text" id="1-reciever"/>
+      </div>
+    </div>
+    <button id = "add-reciever-button" (click)="addMoreReciever()">+ reciever</button>
+  </div>
+
+  <div id="more-recievers">
+    <!-- <div class="more-reciever">
+      <span>To:</span>
+      <input type="text" id="reciever-2"/>
+    </div>
+    <div class="more-reciever">
+      <span>To:</span>
+      <input type="text" id="reciever-3"/>
+    </div> -->
+  </div>
+
+  <div class="subject">
+    <span>Subject:</span>
+    <input type="text" id="subject" />
+  </div>
+  <div id="Priority">
+    <label for="priority_select">Choose Your priority:</label>
+    <select id="priority_select">
+      <option value="So Important">So Important</option>
+      <option value="Important">Important</option>
+      <option value="Default" selected>Default</option>
+      <option value="Low">Low</option>
+    </select>
+  </div>
+  <div id="Attachments">
+    <label for="attachment">Select attachments:</label>
+    <input
+      type="file"
+      id="attachment"
+      multiple
+      (change)="getAttachments($event.target)"
+    />
+  </div>
+  <div class="Message">
+    <label for="message">Enter Your Message: </label>
+    <textarea id="message" rows="8" cols="75"></textarea>
+  </div>
+  <div class="message-options">
+    <button type="button" (click)="sendEmail()">
+      <i class="fa fa-light fa-paper-plane"></i> Send E-mail
+    </button>
+    <button type="button" (click)="moveDraft()">
+      <i class="fa-regular fa-file"></i> Move to Draft
+    </button>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+.light-blocker {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.3;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.pop-up-window {
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  font-size: 1.2em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  z-index: 10000;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.pop-up-window input{
+  border: none;
+  font-size: 1.1em;
+}
+
+.pop-up-window button {
+  cursor: pointer;
+  background-color: lightgreen;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  width: 100%;
+}
+.pop-up-window button:hover{
+  background-color: rgb(192, 250, 192);
+}
+
+.pop-up-window div:not(.send-mail-window div:first-child) {
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+.new-message-label {
+  padding: 7px;
+  background-color: rgb(120, 187, 209);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.new-message-label button {
+  border: none;
+  background-color: rgb(120, 187, 209);
+}
+
+
+.new-message-label button:hover {
+  background-color: rgb(57, 142, 170);
+  border-radius: 50%;
+}
+
+.new-message-label i {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+
+
+
+#folder_select,#view-folder-options select{
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.1);
+  border: none;
+  margin-left: 10px;
+}
+
+
+#select-folder-button, #view-folder-options button{
+  background-color: lightblue;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.25s ease-in-out;
+}
+
+#select-folder-button:hover, #view-folder-options button:hover{
+  box-shadow: 2px 2px 2px black;
+}
+#view-folder-options{
+margin-top: 50px;
+display: none;
+}
