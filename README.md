@@ -8,7 +8,7 @@ A simple web-based email program developed using Angular Framework and Spring Bo
 - [Used design patterns](#used-design-patterns)
 - [UML class diagram](#UML-class-diagram)
 - [Snapshots of our UI and a user guide](#Snapshots-of-our-UI-and-a-user-guide)
-- [Demo Video for using the app](https://drive.google.com/file/d/1edCtHUrJhFHZAs-abk5kfMnM-qpbTsW4/view?usp=share_link)
+- [Demo Video for using the app](#Demo-Video-for-using-the-app)
 ---
 ## Contributers:
 * [Adel Mahmoud](https://github.com/Adel-Mahmoud-Mohamed)
@@ -194,4 +194,4 @@ You can delete the contact by selecting it and clicking on the delete button:
 
 ---
 ## Demo Video for using the app:
-- [link to the video](https://drive.google.com/file/d/1edCtHUrJhFHZAs-abk5kfMnM-qpbTsW4/view?usp=share_link)
+https://user-images.githubusercontent.com/96317608/217936626-fb76d5b2-07b1-4657-a95a-e8ce97c6ebe9.mp4
